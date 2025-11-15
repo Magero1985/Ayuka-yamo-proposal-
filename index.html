@@ -1,1 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuka Yamo AI Health Diagnosis - Investment Proposal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .proposal-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .cover-page {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 50%, #8B7355 100%);
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cover-page h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .cover-page h2 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .funding-amount {
+            font-size: 2em;
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        .organization-info {
+            margin-top: 40px;
+            font-size: 1em;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .section {
+            padding: 40px 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .section h2 {
+            color: #2d5016;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            border-left: 6px solid #4a7c2c;
+            padding-left: 15px;
+        }
+
+        .section h3 {
+            color: #4a7c2c;
+            font-size: 1.3em;
+            margin: 25px 0 12px 0;
+        }
+
+        .section h4 {
+            color: #2d5016;
+            font-size: 1.1em;
+            margin: 15px 0 10px 0;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4a7c2c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .revenue-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid #4a7c2c;
+        }
+
+        .stat-card h3 {
+            color: #2d5016;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.95em;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        table th {
+            background: #4a7c2c;
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9em;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .total-row {
+            background: #e8f5e9 !important;
+            font-weight: bold;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 15px 0;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 12px 12px 12px 40px;
+            margin: 8px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            position: relative;
+            font-size: 0.95em;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            color: #4a7c2c;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .contact-section {
+            background: #2d5016;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .contact-section h2, .contact-section h3 {
+            color: white;
+            border: none;
+            padding: 0;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #4a7c2c;
+            color: white;
+            padding: 12px 30px;
+            margin: 15px 8px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #2d5016;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            .download-btn { display: none; }
+            .section { page-break-inside: avoid; }
+            .cover-page { page-break-after: always; }
+        }
+
+        @media (max-width: 768px) {
+            .cover-page { padding: 40px 20px; }
+            .cover-page h1 { font-size: 1.8em; }
+            .funding-amount { font-size: 1.5em; }
+            .section { padding: 30px 20px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .download-btn { display: block; width: 90%; margin: 10px auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal-container">
+        <div class="cover-page">
+            <h1>🌿 AYUKA YAMO</h1>
+            <h2>AI-Powered Health Diagnosis System</h2>
+            <div class="subtitle">Revolutionizing Healthcare Through Advanced AI and Proven Homeopathic Excellence</div>
+            <div class="funding-amount">
+                Funding Request: KSh 10,000,000<br>
+                <span style="font-size: 0.6em;">(Approximately $77,000 USD)</span>
+            </div>
+            <div class="organization-info">
+                <p><strong>Presented by: Magero Asa Rateng (John Otieno)</strong></p>
+                <p>Founder & CEO</p>
+                <p>Tau Africa Foundation | Valenta Holdings Ltd</p>
+                <p>Komarock, Nairobi, Kenya</p>
+                <p>November 2025</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Executive Summary</h2>
+            <p>Ayuka Yamo represents a groundbreaking fusion of advanced artificial intelligence technology and proven homeopathic medical expertise. With over 95% diagnostic accuracy already achieved in beta testing, this comprehensive KSh 10M investment will establish both digital infrastructure AND physical operational centers across Kenya.</p>
+            
+            <div class="highlight-box">
+                <h3>Complete Investment Breakdown</h3>
+                <p><strong>KSh 5M:</strong> Technology Infrastructure (AI, Backend, Mobile, Payments, Security)<br><br>
+                <strong>KSh 5M:</strong> Three Physical Centers (Production facilities, offices, warehouses, operational teams, professional staff)</p>
+            </div>
+
+            <div class="revenue-box">
+                <h3>💰 Total Revenue Potential</h3>
+                <p><strong>Diagnosis Revenue:</strong> KSh 5.88M per 2,350 users (50/county)<br>
+                <strong>Additional Revenue Streams:</strong> KSh 4.7M per month (KSh 100K/county × 47 counties)<br><br>
+                <strong>TOTAL MONTHLY POTENTIAL: KSh 10.58M+</strong><br><br>
+                This means investment recovery in <strong>UNDER 30 DAYS</strong> at scale, with sustained monthly revenues exceeding the total investment amount.</p>
+            </div>
+
+            <p>Our unique approach combines Homeopathy, Naturopathy, and Allopathy with cutting-edge AI. This methodology has successfully treated chronic conditions including hypertension, diabetes, cancers, hormonal disorders, arthritis, stroke, epilepsy, and numerous other diseases.</p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Problem Statement</h2>
+            <ul class="benefits-list">
+                <li>Limited Professional Diagnosis: Millions lack access to accurate medical diagnosis</li>
+                <li>High Costs: Traditional procedures are prohibitively expensive</li>
+                <li>Shortage of Specialists: Severe shortage of qualified professionals</li>
+                <li>Chronic Condition Epidemic: Rising prevalence with unidentified conditions</li>
+                <li>No Integrated Solution: Lack of platforms combining diagnosis, treatment, AND product delivery</li>
+            </ul>
+            <div class="warning-box">
+                <strong>⚠️ The Cost of Inaction:</strong> Patients continue suffering from unidentified conditions, leading to deteriorating health, increased mortality, and significant economic burden.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💡 Our Complete Solution</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><h3>95%</h3><p>Diagnostic Accuracy</p></div>
+                <div class="stat-card"><h3>KSh 2,500</h3><p>Per Diagnosis</p></div>
+                <div class="stat-card"><h3>3 Centers</h3><p>Physical Facilities</p></div>
+                <div class="stat-card"><h3>47 Counties</h3><p>Complete Coverage</p></div>
+            </div>
+
+            <h3>Digital Platform Features</h3>
+            <div class="highlight-box">
+                <p><strong>1. Advanced AI Diagnosis:</strong> Comprehensive analysis of 11 body systems with 12 specialized AI models<br><br>
+                <strong>2. Integrated Treatments:</strong> Homeopathic, Allopathic, and Naturopathic protocols<br><br>
+                <strong>3. Multi-Stakeholder Platform:</strong> AY Agents, Doctors, Patients, Marketers<br><br>
+                <strong>4. Revenue Ecosystem:</strong> Kabiru Points, commissions, product marketplace</p>
+            </div>
+
+            <h3>Physical Infrastructure (NEW with KSh 5M Investment)</h3>
+            <div class="highlight-box">
+                <h4>Three Operational Centers Established</h4>
+                <p><strong>Center 1: Production & Manufacturing Hub</strong><br>
+                • AY therapeutic product manufacturing facility<br>
+                • Quality control laboratory<br>
+                • Packaging and branding station<br>
+                • Raw material storage warehouse<br><br>
+
+                <strong>Center 2: Distribution & Customer Service Center</strong><br>
+                • Product pickup point for patients<br>
+                • Delivery dispatch center covering all 47 counties<br>
+                • Customer support and consultation rooms<br>
+                • AY Agent training facility<br><br>
+
+                <strong>Center 3: Administrative & Operations Headquarters</strong><br>
+                • Professional office space for management teams<br>
+                • Online operations and tech support center<br>
+                • Marketing and branding department<br>
+                • Finance, audit, and compliance offices<br>
+                • Doctor consultation rooms</p>
+            </div>
+
+            <h3>Professional Staff & Teams (Fully Funded)</h3>
+            <ul class="benefits-list">
+                <li>Production Team: Manufacturers, quality control specialists, packaging staff</li>
+                <li>Field Teams: County coordinators, AY Agents supervisors, delivery personnel</li>
+                <li>Online Management: Platform administrators, customer support, tech support</li>
+                <li>Marketing & Branding: Digital marketers, content creators, county campaign managers</li>
+                <li>Finance & Audit: Accountants, auditors, financial analysts</li>
+                <li>Medical Professionals: Consulting doctors, homeopaths, naturopaths</li>
+                <li>Logistics: Warehouse managers, inventory specialists, delivery coordinators</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📊 Complete Revenue Model - The Full Picture</h2>
+            
+            <h3>Revenue Stream 1: Diagnosis Services</h3>
+            <p>Kenya has 47 counties. Our conservative model: <strong>50 users per county</strong></p>
+            <div class="stats-grid">
+                <div class="stat-card"><h3>2,350</h3><p>Users (50 × 47 counties)</p></div>
+                <div class="stat-card"><h3>KSh 5.88M</h3><p>Diagnosis Revenue</p></div>
+                <div class="stat-card"><h3>Weekly</h3><p>Achievable Timeline</p></div>
+                <div class="stat-card"><h3>KSh 23.5M</h3><p>Monthly Diagnosis</p></div>
+            </div>
+
+            <h3>Revenue Stream 2: Integrated Services (Per County Analysis)</h3>
+            <div class="revenue-box">
+                <h4>Conservative Estimate: KSh 100,000 per County per Month</h4>
+                <p><strong>What's Included in the KSh 100K per County:</strong><br><br>
+                • <strong>Treatment Services:</strong> Follow-up consultations, treatment protocols (KSh 30K/county)<br>
+                • <strong>Product Sales:</strong> AY therapeutic products, supplements, remedies (KSh 40K/county)<br>
+                • <strong>Kabiru Token Transactions:</strong> Point redemptions and conversions (KSh 10K/county)<br>
+                • <strong>AY Agent Registrations:</strong> New agent onboarding fees (KSh 5K/county)<br>
+                • <strong>Licensing & Subscriptions:</strong> Healthcare facilities, corporate wellness (KSh 10K/county)<br>
+                • <strong>Data Analytics:</strong> Anonymized health insights to research institutions (KSh 5K/county)<br><br>
+
+                <strong>47 Counties × KSh 100,000 = KSh 4,700,000 per Month</strong><br>
+                <strong>Annual from Integrated Services: KSh 56,400,000</strong></p>
+            </div>
+
+            <h3>TOTAL REVENUE PROJECTIONS</h3>
+            <table>
+                <thead>
+                    <tr><th>Revenue Source</th><th>Monthly</th><th>Annual Year 1</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Diagnosis Services</td><td>23,500,000</td><td>282,000,000</td></tr>
+                    <tr><td>Treatment Services</td><td>1,410,000</td><td>16,920,000</td></tr>
+                    <tr><td>Product Sales</td><td>1,880,000</td><td>22,560,000</td></tr>
+                    <tr><td>Kabiru Token</td><td>470,000</td><td>5,640,000</td></tr>
+                    <tr><td>Registrations & Licenses</td><td>705,000</td><td>8,460,000</td></tr>
+                    <tr><td>Data & Analytics</td><td>235,000</td><td>2,820,000</td></tr>
+                    <tr class="total-row"><td><strong>TOTAL REVENUE</strong></td><td><strong>28,200,000</strong></td><td><strong>338,400,000</strong></td></tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h4>Investment Recovery Analysis</h4>
+                <p><strong>Total Investment:</strong> KSh 10,000,000<br>
+                <strong>Monthly Revenue at Scale:</strong> KSh 28,200,000<br>
+                <strong>Investment Recovery Period:</strong> <strong>11 DAYS</strong> (at full scale operation)<br>
+                <strong>First Year ROI:</strong> <strong>3,284%</strong><br><br>
+                This makes the KSh 10M investment a "peanut" compared to the powerful revenue generation capacity of the fully operational system.</p>
+            </div>
+
+            <h3>5-Year Projections (All Revenue Streams Combined)</h3>
+            <table>
+                <thead>
+                    <tr><th>Year</th><th>Diagnosis Revenue</th><th>Integrated Services</th><th>Total Revenue</th><th>USD</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Year 1</td><td>282,000,000</td><td>56,400,000</td><td>338,400,000</td><td>$2,603,000</td></tr>
+                    <tr><td>Year 2</td><td>564,000,000</td><td>135,000,000</td><td>699,000,000</td><td>$5,377,000</td></tr>
+                    <tr><td>Year 3</td><td>1,175,000,000</td><td>280,000,000</td><td>1,455,000,000</td><td>$11,192,000</td></tr>
+                    <tr><td>Year 4</td><td>1,880,000,000</td><td>450,000,000</td><td>2,330,000,000</td><td>$17,923,000</td></tr>
+                    <tr><td>Year 5</td><td>2,820,000,000</td><td>675,000,000</td><td>3,495,000,000</td><td>$26,885,000</td></tr>
+                    <tr class="total-row"><td><strong>5-Year Total</strong></td><td><strong>6,721,000,000</strong></td><td><strong>1,596,400,000</strong></td><td><strong>8,317,400,000</strong></td><td><strong>$63,980,000</strong></td></tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>Note:</strong> These projections demonstrate why KSh 10M is minimal compared to the revenue potential. The physical centers enable product manufacturing and distribution, multiplying revenue streams exponentially.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Budget Breakdown - KSh 10,000,000</h2>
+            
+            <h3>Part 1: Technology Infrastructure (KSh 5,000,000)</h3>
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Description</th><th>Amount</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Backend Infrastructure</td><td>Enterprise cloud, databases, API hosting</td><td>1,200,000</td></tr>
+                    <tr><td>AI Integration</td><td>12 specialized AI models, Claude API</td><td>1,000,000</td></tr>
+                    <tr><td>Payment Systems</td><td>M-Pesa, international gateways</td><td>600,000</td></tr>
+                    <tr><td>Points & Rewards</td><td>Kabiru points infrastructure</td><td>500,000</td></tr>
+                    <tr><td>Mobile Apps</td><td>Android and iOS native apps</td><td>450,000</td></tr>
+                    <tr><td>Communications</td><td>Email, SMS, WhatsApp integration</td><td>300,000</td></tr>
+                    <tr><td>Security</td><td>Enterprise encryption, HIPAA compliance</td><td>350,000</td></tr>
+                    <tr><td>Testing & QA</td><td>Stress testing for 10K+ users</td><td>200,000</td></tr>
+                    <tr><td>Marketing Launch</td><td>47-county digital campaigns</td><td>250,000</td></tr>
+                    <tr><td>Legal & Compliance</td><td>Certification, IP protection</td><td>100,000</td></tr>
+                    <tr><td>Contingency</td><td>Tech reserves</td><td>50,000</td></tr>
+                    <tr class="total-row"><td colspan="2"><strong>Technology Subtotal</strong></td><td><strong>5,000,000</strong></td></tr>
+                </tbody>
+            </table>
+
+            <h3>Part 2: Physical Infrastructure & Operations (KSh 5,000,000)</h3>
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Description</th><th>Amount</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Production Center Setup</td><td>Manufacturing equipment, quality lab, warehouse</td><td>1,500,000</td></tr>
+                    <tr><td>Distribution Center</td><td>Pickup facility, delivery fleet, storage</td><td>1,000,000</td></tr>
+                    <tr><td>Administrative HQ</td><td>Office space, furniture, tech equipment</td><td>800,000</td></tr>
+                    <tr><td>Staff Salaries (6 months)</td><td>Professional teams fully funded</td><td>1,200,000</td></tr>
+                    <tr><td>Initial Inventory</td><td>Raw materials, packaging, first production batch</td><td>300,000</td></tr>
+                    <tr><td>Vehicles & Logistics</td><td>Delivery vehicles, motorcycles, fuel</td><td>100,000</td></tr>
+                    <tr><td>Operational Reserve</td><td>Working capital for scaling</td><td>100,000</td></tr>
+                    <tr class="total-row"><td colspan="2"><strong>Physical Infrastructure Subtotal</strong></td><td><strong>5,000,000</strong></td></tr>
+                    <tr class="total-row" style="background: #4a7c2c; color: white;"><td colspan="2"><strong>TOTAL INVESTMENT</strong></td><td><strong>10,000,000</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🏆 Competitive Advantage</h2>
+            <div class="highlight-box">
+                <p><strong>1. Proven Medical Expertise:</strong> Years of clinical success treating chronic conditions<br><br>
+                <strong>2. Triple-Modality Integration:</strong> Only platform combining Homeopathy, Naturopathy, Allopathy<br><br>
+                <strong>3. 95% Accuracy:</strong> Rivals traditional hospital diagnosis<br><br>
+                <strong>4. Complete Ecosystem:</strong> Digital diagnosis + Physical production + Distribution network<br><br>
+                <strong>5. County-Based Model:</strong> Systematic coverage of all 47 counties<br><br>
+                <strong>6. First-Mover:</strong> Zero direct competition with this comprehensive model<br><br>
+                <strong>7. Multiple Revenue Streams:</strong> 6+ income sources per county</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Expected Outcomes</h2>
+            <h3>First 3 Months (Q1 2026)</h3>
+            <table>
+                <thead>
+                    <tr><th>Month</th><th>Milestone</th><th>Total Revenue</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Month 1</td><td>Centers operational, 20 counties launch</td><td>KSh 5,000,000</td></tr>
+                    <tr><td>Month 2</td><td>All 47 counties active, products launched</td><td>KSh 11,750,000</td></tr>
+                    <tr><td>Month 3</td><td>Full scale operations across all streams</td><td>KSh 28,200,000</td></tr>
+                </tbody>
+            </table>
+
+            <h3>12-Month Outcomes</h3>
+            <ul class="benefits-list">
+                <li>282,000+ diagnoses performed</li>
+                <li>2,000+ AY Agents across all counties</li>
+                <li>Three fully operational centers producing and distributing products</li>
+                <li>KSh 338,400,000+ total revenue generated</li>
+                <li>Investment recovered 33x over</li>
+                <li>Recognized as East Africa's premier integrated health platform</li>
+                <li>Expansion to Tanzania, Uganda, Rwanda underway</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Investment Highlights</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><h3>11 Days</h3><p>ROI Recovery at Scale</p></div>
+                <div class="stat-card"><h3>3,284%</h3><p>First Year ROI</p></div>
+                <div class="stat-card"><h3>KSh 8.3B</h3><p>5-Year Revenue</p></div>
+                <div class="stat-card"><h3>$64M</h3><p>5-Year USD Value</p></div>
+            </div>
+
+            <h3>Perpetual Benefits for Investors</h3>
+            <div class="highlight-box">
+                <h4>Revenue Sharing Proportional to Investment</h4>
+                <p><strong>Important:</strong> The amount of revenue shares that each investor receives is <strong>directly proportional to their investment amount</strong>. Larger investments receive proportionally larger ongoing revenue shares.</p>
+                <ul class="benefits-list">
+                    <li>Ongoing Revenue Share: Percentage of all revenue streams proportional to investment</li>
+                    <li>Equity Appreciation: Company valuation increases exponentially with physical presence</li>
+                    <li>Regional Expansion Rights: Priority investment in new countries and centers</li>
+                    <li>Product Revenue: Direct share in AY product sales and manufacturing profits</li>
+                    <li>Licensing Income: Recurring revenue from facilities and insurers</li>
+                    <li>Real Asset Value: Three physical centers provide tangible asset backing</li>
+                    <li>Strategic Positioning: Complete ecosystem dominance in East Africa</li>
+                    <li>Social Impact: Recognition and tax benefits from healthcare transformation</li>
+                </ul>
+            </div>
+
+            <div class="revenue-box">
+                <h4>Why KSh 10M is a "Peanut" Investment</h4>
+                <p><strong>Monthly Revenue at Full Scale:</strong> KSh 28.2M<br>
+                <strong>Investment Amount:</strong> KSh 10M<br>
+                <strong>Recovery Time:</strong> 11 days<br>
+                <strong>Monthly Profit After Recovery:</strong> KSh 18.2M+<br><br>
+                Within just TWO MONTHS of full operation, the platform generates revenues that are 5x the initial investment. By Year 1, revenues are 33x the investment. By Year 5, revenues exceed 800x the initial investment.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤝 Partnership Options</h2>
+            <h3>Full Funding (KSh 10,000,000)</h3>
+            <div class="highlight-box">
+                <p><strong>Exclusive Founding Partner Benefits:</strong><br>
+                Primary partner status across all 47 counties, monthly financial reports, executive board seat, major equity stake OR premium revenue sharing (proportional), naming rights on production centers, first-right on all expansion opportunities, share in all 6+ revenue streams, tangible asset ownership in physical facilities, tax benefits, legacy recognition</p>
+            </div>
+
+            <h3>Partial Funding Tiers (Revenue Share Proportional to Investment)</h3>
+            <table>
+                <thead>
+                    <tr><th>Tier</th><th>Amount</th><th>Proportional Benefits</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Diamond</strong></td><td>KSh 5,000,000+</td><td>50% revenue share, major branding, advisory seat, equity options</td></tr>
+                    <tr><td><strong>Platinum</strong></td><td>KSh 3,000,000</td><td>30% revenue share, prominent branding, quarterly reports</td></tr>
+                    <tr><td><strong>Gold</strong></td><td>KSh 1,500,000</td><td>15% revenue share, partner listing, expansion rights</td></tr>
+                    <tr><td><strong>Silver</strong></td><td>KSh 750,000</td><td>7.5% revenue share, recognition, impact reports</td></tr>
+                    <tr><td><strong>Bronze</strong></td><td>KSh 250,000+</td><td>2.5%+ revenue share, updates, supporter benefits</td></tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>Note on Revenue Sharing:</strong> All revenue sharing percentages are illustrative examples. Actual revenue share amounts are calculated proportionally based on your investment as a percentage of total funding raised. The more you invest, the larger your perpetual revenue share from all income streams.
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>📞 Contact Us - Transform Healthcare Across Africa</h2>
+            <p style="font-size: 1.1em; margin: 20px 0;">Ready to invest in Kenya's most comprehensive health-tech solution?</p>
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>👤 Founder & CEO</h3>
+                    <p><strong>Magero Asa Rateng (John Otieno)</strong><br>Tau Africa Foundation<br>Valenta Holdings Ltd</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📧 Email</h3>
+                    <p>jonuasa@gmail.com<br>grouptauafrica@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📱 Phone</h3>
+                    <p>+254 725 646 331<br>+254 101 646 331</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📍 Location</h3>
+                    <p>Komarock, Nairobi<br>Kenya, East Africa</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <button class="download-btn" onclick="window.print(); alert('💡 TIP: In the print dialog, select \'Save as PDF\' to download this proposal as a PDF file.')">📄 Download as PDF</button>
+                <a href="mailto:jonuasa@gmail.com?subject=Ayuka%20Yamo%20Investment%20Interest%20-%20KSh%2010M&body=Dear%20John%20Otieno,%0D%0A%0D%0AI%20am%20interested%20in%20investing%20in%20the%20Ayuka%20Yamo%20project.%0D%0A%0D%0AInvestment%20Amount%20Interested%20In:%20KSh%20_________%0D%0A%0D%0APlease%20provide%20detailed%20information%20about:%0D%0A-%20Revenue%20sharing%20structure%0D%0A-%20Equity%20options%0D%0A-%20Partnership%20terms%0D%0A-%20Investment%20timeline%0D%0A%0D%0AThank%20you." class="download-btn">✉️ Express Investment Interest</a>
+            </div>
+
+            <div style="margin-top: 30px; padding: 25px; background: rgba(255,255,255,0.1); border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3>Schedule a Comprehensive Presentation</h3>
+                <p style="margin-top: 15px;">John Otieno is available to provide:</p>
+                <ul style="text-align: left; margin: 15px 0; padding-left: 40px;">
+                    <li>Live demo of the AI diagnosis system</li>
+                    <li>Physical center site visits and plans</li>
+                    <li>Detailed revenue breakdowns and projections</li>
+                    <li>Patient case studies and success evidence</li>
+                    <li>Customized investment and revenue sharing proposals</li>
+                    <li>Q&A addressing all investor concerns</li>
+                </ul>
+                <p style="margin-top: 15px; font-size: 1.05em;"><strong>Contact John directly:</strong><br>jonuasa@gmail.com | +254 725 646 331</p>
+            </div>
+
+            <div style="margin-top: 30px; padding: 25px; background: rgba(255,255,255,0.15); border-radius: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <h3 style="margin-bottom: 15px;">💡 How to Download This Proposal as PDF</h3>
+                <p style="text-align: left; line-height: 1.8;">
+                    <strong>Option 1 - Using the Button Above:</strong><br>
+                    1. Click the "Download as PDF" button<br>
+                    2. In the print dialog, select "Save as PDF" or "Microsoft Print to PDF"<br>
+                    3. Choose your save location<br>
+                    4. Click Save<br><br>
+                    
+                    <strong>Option 2 - Using Browser:</strong><br>
+                    • <strong>Windows:</strong> Press Ctrl + P, select "Save as PDF"<br>
+                    • <strong>Mac:</strong> Press Cmd + P, click "PDF" dropdown, select "Save as PDF"<br>
+                    • <strong>Mobile:</strong> Use browser menu → Share → Print → Save as PDF<br><br>
+                    
+                    The PDF will contain all sections from cover page to footer with proper formatting.
+                </p>
+            </div>
+        </div>
+
+        <div style="background: #8B7355; color: white; padding: 40px 30px; text-align: center;">
+            <h2 style="margin-bottom: 20px; color: white;">🌿 Thank You for Considering Ayuka Yamo</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                Together, we can revolutionize healthcare delivery across Africa through a complete ecosystem of AI-powered diagnosis, physical production centers, and nationwide distribution. This KSh 10M investment establishes not just a digital platform, but a sustainable healthcare enterprise that will generate revenues exceeding 800x the investment over 5 years while saving countless lives.
+            </p>
+            <p style="margin-top: 25px; font-size: 1.1em;">
+                <strong>Tau Africa Foundation | Valenta Holdings Ltd</strong><br>
+                <em>"Empowering Health, Transforming Lives, Building Infrastructure"</em>
+            </p>
+            <p style="margin-top: 20px; opacity: 0.9;">
+                <strong>Founder & CEO:</strong> John Otieno<br>
+                Komarock, Nairobi, Kenya<br>
+                jonuasa@gmail.com | +254 725 646 331
+            </p>
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: white; margin-bottom: 15px;">Investment Highlights Summary</h3>
+                <p style="font-size: 1.05em; line-height: 1.8;">
+                    <strong>Total Investment:</strong> KSh 10,000,000 ($77,000)<br>
+                    <strong>Monthly Revenue at Scale:</strong> KSh 28,200,000<br>
+                    <strong>Investment Recovery:</strong> 11 days<br>
+                    <strong>Year 1 ROI:</strong> 3,284%<br>
+                    <strong>5-Year Revenue:</strong> KSh 8.3 Billion ($64M)<br>
+                    <strong>Revenue Share:</strong> Proportional to investment amount<br>
+                    <strong>Physical Assets:</strong> 3 operational centers<br>
+                    <strong>Market Coverage:</strong> All 47 counties in Kenya
+                </p>
+            </div>
+            <p style="margin-top: 20px; opacity: 0.8; font-size: 0.9em;">
+                © 2025 Tau Africa Foundation. All Rights Reserved.<br>
+                Proposal Version 2.0 - Complete Investment Package | November 2025
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced print function with user guidance
+        function downloadPDF() {
+            alert('💡 DOWNLOAD INSTRUCTIONS:\n\n1. A print dialog will open\n2. Select "Save as PDF" or "Microsoft Print to PDF"\n3. Choose your save location\n4. Click Save\n\nThe complete proposal will be saved as a PDF file on your device.');
+            window.print();
+        }
+    </script>
+</body>
+  </html>
